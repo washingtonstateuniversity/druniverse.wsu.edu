@@ -4,7 +4,7 @@
 </div>
 <div class="footer-description">
 <?php 
-	$my_postid = 48;//This is page id or post id
+	$my_postid = 304;//This is page id or post id
 $content_post = get_post($my_postid);
 $content = $content_post->post_content;
 $content = apply_filters('the_content', $content);
@@ -29,7 +29,7 @@ echo $content;
 </nav>
 <div id="site-copyright">
 		<?php 
-	$my_postid = 44;//This is page id or post id
+	$my_postid = 306;//This is page id or post id
 $content_post = get_post($my_postid);
 $content = $content_post->post_content;
 $content = apply_filters('the_content', $content);
