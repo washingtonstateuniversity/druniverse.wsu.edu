@@ -1,6 +1,6 @@
 <footer role="footer" class="main-foot equalize">
 <div class="wsu-logo">
-	<a title="Washington State University" href="http://www.wsu.edu"><img src="/wp-content/uploads/sites/6/2015/01/bg-header.jpg" width="196px" height="61px" alt="Washington State University" /></a>
+	<a title="Washington State University" href="http://www.wsu.edu"><img src="/wp-content/uploads/sites/611/2015/01/bg-header.jpg" width="196px" height="61px" alt="Washington State University" /></a>
 </div>
 <div class="footer-description">
 <?php 
