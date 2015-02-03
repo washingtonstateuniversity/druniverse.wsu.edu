@@ -59,7 +59,7 @@ class dru_Shortcodes {
 		return $content;
 	}
 	/**
-	 * Handle the display of the tag_cloud shortcode.
+	 * Handle the display of the featured_q shortcode.
 	 *
 	 * @return string HTML output
 	 */
