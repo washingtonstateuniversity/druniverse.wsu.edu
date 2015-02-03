@@ -9,6 +9,7 @@ class dru_Shortcodes {
 	public function __construct() {
 		add_shortcode( 'tag_cloud', array( $this, 'tag_cloud_display' ) );
 		add_shortcode( 'search_bar', array( $this, 'search_bar_display' ) );
+		add_shortcode( 'featured_q', array( $this, 'featured-q_display' ) );
 	}
 	/**
 	 * Handle the display of the tag_cloud shortcode.
@@ -52,6 +53,41 @@ class dru_Shortcodes {
 	</div>
 </form>
 
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+		return $content;
+	}
+	/**
+	 * Handle the display of the tag_cloud shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function featured_q_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+<?php
+				$args = array(
+				'posts_per_page' => 1,
+				'post_type' => 'post',
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'category',
+						'field' => 'slug',
+						'terms' => 'featured-q'
+					),
+				),
+			);
+			$my_posts = new WP_Query( $args );
+			if ( $my_posts->have_posts() ) : while( $my_posts->have_posts() ) : $my_posts->the_post();
+				?>
+				<h1 class="blog-side-title"><?php echo get_the_title(); ?></h1>
+				<span class="blog-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 44, '...' ); ?></span>
+				<span class="rmore"><a href="<?php the_permalink(); ?>">More</a></span>
+			<?php endwhile; endif;
+			wp_reset_query();
+			?>
 		<?php
 		$content = ob_get_contents();
 		ob_end_clean();
