@@ -86,9 +86,9 @@ class dru_Shortcodes {
 
 		if ( $my_posts->have_posts() ) : while( $my_posts->have_posts() ) : $my_posts->the_post();
 		?>
-			<h1 class="blog-side-title"><?php echo get_the_title(); ?></h1>
-			<span class="blog-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 44, '...' ); ?></span>
-			<span class="rmore"><a href="<?php the_permalink(); ?>">More</a></span>
+			<h1 class="blog-title"><a href="<?php the_permalink(); ?>" class="crimson"><?php echo get_the_title(); ?></a></h1>
+			<p class="blog-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 44, '...' ); ?></p>
+			<p class="rmore"><a href="<?php the_permalink(); ?>">More</a></p>
 		<?php endwhile; endif;
 
 		wp_reset_query();
