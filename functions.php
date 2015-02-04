@@ -11,7 +11,11 @@ function dru_child_enqueue_scripts() {
     wp_enqueue_script( 'drutrycache', get_stylesheet_directory_uri() . '/js/trytypekit.js', array( 'jquery' ), spine_get_script_version(), true );
 
 }
-/* 
-* Add HTML5 search box
-*/
-add_theme_support( 'html5', array( 'search-form' ) );
+
+add_action( 'after_setup_theme', 'dru_theme_setup' );
+/**
+ * Process various tasks when setting up the theme.
+ */
+function dru_theme_setup() {
+    add_theme_support( 'html5', array( 'search-form' ) );
+}
