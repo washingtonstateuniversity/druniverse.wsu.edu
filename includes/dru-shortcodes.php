@@ -89,7 +89,7 @@ class dru_Shortcodes {
 			<div class="nested-halves">
 				<div class="nested-one">
 			<h1 class="blog-title"><a href="<?php the_permalink(); ?>" class="crimson"><?php echo get_the_title(); ?></a></h1>
-			<p class="blog-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 22, '...' ); ?></p>
+			<p class="blog-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 72, '...' ); ?></p>
 			<p class="rmore"><a href="<?php the_permalink(); ?>">Read more</a></p>
 		</div>
 			<div class="nested-two">
