@@ -9,7 +9,7 @@ class dru_Shortcodes {
 	public function __construct() {
 		add_shortcode( 'tag_cloud', array( $this, 'tag_cloud_display' ) );
 		add_shortcode( 'search_bar', array( $this, 'search_bar_display' ) );
-		add_shortcode( 'featured_q', array( $this, 'featured-q_display' ) );
+		add_shortcode( 'featured_q', array( $this, 'featured_q_display' ) );
 	}
 	/**
 	 * Handle the display of the tag_cloud shortcode.
