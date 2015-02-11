@@ -7,7 +7,9 @@
 			<?php get_template_part( 'articles/post', get_post_type() ) ?>
 
 		<?php endwhile; ?>
+<div id="widget-wrap">		
 <?php get_sidebar(); ?>
+</div>
 	</div><!--/column-->
 
 	<div class="column two">
