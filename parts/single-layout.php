@@ -1,4 +1,4 @@
-<section class="row side-right gutter pad-ends">
+<section class="row single gutter pad-ends">
 
 	<div class="column one">
 
@@ -11,11 +11,5 @@
 <?php get_sidebar(); ?>
 </div>
 	</div><!--/column-->
-
-	<div class="column two">
-
-		
-
-	</div><!--/column two-->
 
 </section>
